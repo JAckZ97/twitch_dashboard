@@ -1,0 +1,31 @@
+<div>
+    <p>
+        <ngb-alert [dismissible]="false">
+          <strong>Alert</strong> Please allow some time fetch the data when just open the browser.
+        </ngb-alert>
+    </p>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Game name</th>
+                <th scope="col">Viewer Count</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <th scope="row">Rainbow Six Siege</th>
+                <th scope="row">{{viewerCount}}</th>
+            </tr>
+        </tbody>
+    </table>
+
+    <div width="800" height="600">
+        <canvas id="canvas">{{lineChart}}</canvas>
+    </div>
+    
+</div>
+
+
+
