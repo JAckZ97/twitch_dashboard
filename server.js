@@ -1,7 +1,9 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-app.use(express.static(__dirname + '/dist/angular-flask'));
-app.get('/*', function(req,res) {
-    res.sendFile(path.join(__dirname+'/dist/angular-flask/index.html'));});
-app.listen(process.env.PORT || 8080);
+
+const PORT = process.env.PORT || 5000;
+
+app.use('/', express.static(__dirname + '/dist/angular_flask'));
+app.get('*', function(req,res) {res.sendFile(path.join(__dirname+'/dist/angular_flask/index.html'));});
+app.listen(PORT, () => console.log(`${PORT}`));
