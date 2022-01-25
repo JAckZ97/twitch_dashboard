@@ -45,6 +45,8 @@ export class DashboardsComponent implements OnInit {
       console.log('Disconnected!');
     });
 
+    this.socket.emit('Stream_viewer');
+    
     setInterval(()=>{
       // emit to "Stream_viewer" every 10s to trigger the backend to  
       // emit back new twitch streamer viewer count
